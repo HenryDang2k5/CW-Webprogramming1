@@ -1,0 +1,120 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 1s ease-in-out; /* Smooth background transition */
+}
+
+/* Form container styles */
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transform: scale(0.95);
+    animation: scaleUp 0.5s ease-out forwards;
+}
+
+/* Animation for form container */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Title styles */
+form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    animation: fadeInText 1s ease-in-out;
+}
+
+/* Animation for title */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Input field styles */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styles */
+form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+form button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+form button:active {
+    background: #004085;
+    transform: translateY(1px);
+}
+
+/* Link and footer text styles */
+form p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+form a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Responsive design: Make form responsive on smaller screens */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form h1 {
+        font-size: 20px;
+    }
+}

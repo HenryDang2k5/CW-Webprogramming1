@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f7c8c8, #f7f7f7); /* Soft gradient background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff; /* Blue header */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 20px; /* Added more padding for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+form {
+    background: white; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="text"], textarea, select, input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus, input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+select:hover {
+    background-color: #eef;
+}
+
+button[type="submit"], .cancel-btn {
+    background: #28a745; /* Green for submit button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    width: 100%; /* Ensures both buttons are the same size */
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover, .cancel-btn:hover {
+    background: #218838; /* Darker green for hover effect */
+}
+
+.cancel-btn {
+    background: #dc3545; /* Red for cancel button */
+    color: white;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: 94%; /* Same width as submit button */
+}
+
+.cancel-btn:hover {
+    background: #c82333;
+}
+
+.post-image {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.post-image img {
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    form {
+        width: 95%;
+    }
+}
